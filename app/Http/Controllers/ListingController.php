@@ -12,7 +12,8 @@ class ListingController extends Controller
     {
         return view('listings.index', [
             'heading' => 'Latest Listings',
-            'listings' => Listing::latest()->filter(request(['tag', 'search']))->get(),
+            'listings' => Listing::latest()->filter(request(['tag', 'search']))->Paginate(6),
+            // simplePaginate() displays prev and next links without showing page numbers
         ]);
     }
     //implement Route-Model Binding
@@ -39,6 +40,8 @@ class ListingController extends Controller
             'tags' => 'required',
             'description' => 'required'
         ]);
+
+
 
         Listing::create($formFields);
 
