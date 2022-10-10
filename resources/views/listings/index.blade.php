@@ -1,3 +1,4 @@
+{{-- wrap it in layout --}}
 <x-layout>
 
     @include('partials._hero')
