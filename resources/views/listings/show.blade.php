@@ -43,5 +43,6 @@
                 <i class="fa-solid fa-pencil"></i>Edit
             </a>
         </x-card>
+        <form action="/listings/{{ $id }}"></form>
     </div>
 </x-layout>
