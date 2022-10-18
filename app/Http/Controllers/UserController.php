@@ -41,6 +41,7 @@ class UserController extends Controller
     {
         auth()->logout();
 
+        //invalidate users session and regenerate csrf token
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 

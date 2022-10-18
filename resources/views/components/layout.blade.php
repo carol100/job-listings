@@ -39,7 +39,10 @@
                 </li>
                 <li>
                     <form class="inline" method="POST" action="/logout">
-                        <i class="fa-solid fa-door-closed">logout</i>
+                        @csrf
+                        <button type="submit">
+                            <i class="fa-solid fa-door-closed"></i>logout
+                        </button>
                     </form>
                 </li>
             @else
