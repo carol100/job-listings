@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Listing;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
+use PhpParser\Node\Expr\List_;
 
 class ListingController extends Controller
 {
@@ -87,6 +88,6 @@ class ListingController extends Controller
 
     public function manage()
     {
-        return view('listings.manage', ['listings' => auth()->user()->listings()->get()]);
+        return view('listings.manage', ['listings' => Listing::all()]);
     }
 }
