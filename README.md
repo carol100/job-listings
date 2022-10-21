@@ -35,4 +35,4 @@ Start the server
 
 ## Acknowledgements
 
-    - [Traversary Media](https://github.com/bradtraversy/laragigs)
+- [Traversary Media](https://github.com/bradtraversy/laragigs)
